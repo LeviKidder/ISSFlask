@@ -26,7 +26,7 @@ def index():
 
 
 #obtaining IP address
-    ip = jsonify({'ip': request.remote_addr})
+    ip = str(jsonify({'ip': request.remote_addr}))
 
 #defining ISS Lat/Long variables
     ISS_lat = (iss_location['iss_position']['latitude'])
