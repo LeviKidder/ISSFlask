@@ -70,7 +70,7 @@ def index():
     distance = (earth_radius*centerangle)+240
     value1 ='You are about '+str(round(distance,2))+ ' miles away from the ISS!'
     value2 = 'The ISS is located at '+str(ISS_lat)+ ' latitude, and '+str(ISS_long)+ ' longitude!'
-    value3 = 'You are located at '+str(location_lat)+' latitude, and'+str(location_long)+' longitude!'
+    value3 = 'You are located at '+str(location_lat)+' latitude, and '+str(location_long)+' longitude!'
     
     
     return render_template("profile.html", value1=value1,value2=value2,value3=value3)
