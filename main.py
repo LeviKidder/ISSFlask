@@ -26,7 +26,10 @@ def index():
 
 
 #obtaining IP address
-    ip = str(request.environ.get('HTTP_X_REAL_IP', request.remote_addr))
+    if not request.headers.getlist("X-Forwarded-For"):
+        ip = request.remote_addr
+    else:
+        ip = request.headers.getlist("X-Forwarded-For")[0]
 
 #defining ISS Lat/Long variables
     ISS_lat = (iss_location['iss_position']['latitude'])
