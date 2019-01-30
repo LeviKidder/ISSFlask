@@ -67,7 +67,7 @@ def index():
     centerangle= 2*asin(sqrt(haversine))
 
 #determining distance value +240 for distance above earth
-    distance = (earth_radius*centerangle)+240
+    distance = sqrt(((earth_radius*centerangle)**2)+ (240**2))
     value1 ='You are about '+str(round(distance,2))+ ' miles away from the ISS!'
     value2 = 'The ISS is located at '+str(ISS_lat)+ ' latitude, and '+str(ISS_long)+ ' longitude!'
     value3 = 'You are located at '+str(location_lat)+' latitude, and '+str(location_long)+' longitude!'
