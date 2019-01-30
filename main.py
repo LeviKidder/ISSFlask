@@ -27,8 +27,7 @@ def index():
 
 
 #obtaining IP address
-
-   ip = get_my_ip()
+    ip = get_my_ip()
 
 #defining ISS Lat/Long variables
     ISS_lat = (iss_location['iss_position']['latitude'])
