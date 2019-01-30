@@ -1,9 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request, jsonify
 import urllib.request
 import json
-from requests import get
-from math import radians, sin, cos, sqrt, asin
 
+from math import radians, sin, cos, sqrt, asin
+def get_my_ip():
+    return jsonify({'ip': request.remote_addr}), 200
 
 app = Flask(__name__)
 
@@ -26,7 +27,8 @@ def index():
 
 
 #obtaining IP address
-    ip = get('https://api.ipify.org').text
+
+   ip = get_my_ip()
 
 #defining ISS Lat/Long variables
     ISS_lat = (iss_location['iss_position']['latitude'])
