@@ -3,8 +3,7 @@ import urllib.request
 import json
 
 from math import radians, sin, cos, sqrt, asin
-def get_my_ip():
-    return jsonify({'ip': request.remote_addr}), 200
+
 
 app = Flask(__name__)
 
@@ -27,7 +26,7 @@ def index():
 
 
 #obtaining IP address
-    ip = get_my_ip()
+    ip = jsonify({'ip': request.remote_addr})
 
 #defining ISS Lat/Long variables
     ISS_lat = (iss_location['iss_position']['latitude'])
