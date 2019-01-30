@@ -27,7 +27,7 @@ def index():
 
 #obtaining IP address
     ip = str(request.environ['REMOTE_ADDR'])
-
+    print(ip)
 #defining ISS Lat/Long variables
     ISS_lat = (iss_location['iss_position']['latitude'])
     ISS_long = (iss_location['iss_position']['longitude'])
@@ -44,7 +44,7 @@ def index():
 
 #Creating location dictionary/defining laction lat/long variables
     location = json.loads(json_string)
-    location_lat = location['latitude']
+    location_lat = ['latitude']
     location_long = location['longitude']
     
 
