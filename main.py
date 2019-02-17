@@ -45,7 +45,7 @@ def index():
     json_string = IPlocation.read()
     IPlocation.close()
 
-#Creating location dictionary/defining laction lat/long variables
+#Creating location dictionary/defining location lat/long variables
     location = json.loads(json_string)
     location_lat = location['latitude']
     location_long = location['longitude']
